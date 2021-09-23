@@ -3,11 +3,10 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        String od = args[0];
         int cena = 0;
         int i = 0;
         String[] pole = new String[args.length];
-        if (od.equals("1") || od.equals("2") || od.equals("3")) {
+        if (args[0].equals("1") || args[0].equals("2") || args[0].equals("3")) {
             while (i < args.length) {
                 if (args[i].equals("1")) {
                     pole[i] = "rohlik";
@@ -29,7 +28,7 @@ public class Main {
                 }
                 System.out.println("cena: "+cena);
             }
-        } else {
+        } else{
             System.out.println("1 je rohlik");
             System.out.println("2 je mliko");
             System.out.println("3 je cokolada");
