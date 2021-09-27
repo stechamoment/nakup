@@ -6,7 +6,12 @@ public class Main {
         int cena = 0;
         int i = 0;
         String[] pole = new String[args.length];
-        if (args[0].equals("1") || args[0].equals("2") || args[0].equals("3")) {
+        if (args.length==0) {
+            System.out.println("1 je rohlik");
+            System.out.println("2 je mliko");
+            System.out.println("3 je cokolada");
+
+        } else{
             while (i < args.length) {
                 if (args[i].equals("1")) {
                     pole[i] = "rohlik";
@@ -17,6 +22,8 @@ public class Main {
                 }else if (args[i].equals("3")) {
                     pole[i] = "cokolada";
                     cena = cena + 30;
+                }else{
+                    pole[i] = "nevim";
                 }
                 i++;
             }{
@@ -28,10 +35,6 @@ public class Main {
                 }
                 System.out.println("cena: "+cena);
             }
-        } else{
-            System.out.println("1 je rohlik");
-            System.out.println("2 je mliko");
-            System.out.println("3 je cokolada");
         }
 
     }
